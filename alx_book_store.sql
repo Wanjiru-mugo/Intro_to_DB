@@ -23,7 +23,7 @@ my_cursor.execute("""
 		price DOUBLE,
 		publication_date DATE,
 		FOREIGN KEY (author_id)
-		REFERENCING Authors(author_id)
+		REFERENCES Authors(author_id)
 	)
 """)
 my_cursor.execute("""
@@ -39,8 +39,7 @@ my_cursor.execute("""
 		order_id INT PRIMARY KEY, 
 		customer_id INT,
 		order_date DATE,
-		FOREIGN KEY (customer_id)
-		REFERENCES Customers(customer_id)
+		FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 	)
 """)
 my_cursor.execute("""
