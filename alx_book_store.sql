@@ -8,6 +8,7 @@ mydb_connection = mysql.connector.connect(
 	)
 /*initializing cursor method to execute querries*/
 my_cursor = mydb_connection.cursor()
+my_cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
 my_cursor.execute("""
 	CREATE TABLE Authors (
 		author_id INT PRIMARY KEY,
